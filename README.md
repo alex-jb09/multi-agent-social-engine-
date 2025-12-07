@@ -29,28 +29,55 @@ https://www.kaggle.com/datasets/datasnaek/mbti-type
 
 ---
 
-## 🏗️ Project Structure
-multi-agent-social-engine/
+## 🏗️ Project Structuremulti-agent-social-engine/
 │
 ├── agents/
-│ ├── agent.py
-│ ├── persona_builder.py
+│ ├── agent.py # Defines Agent class
+│ ├── persona_builder.py # Builds persona from MBTI dataset
 │
 ├── orchestrator/
-│ ├── dialogue_manager.py
+│ ├── dialogue_manager.py # Controls agent turn-taking dialogue
 │
 ├── tools/
-│ ├── sentiment_tool.py
+│ ├── sentiment_tool.py # Sentiment analysis module
 │
 ├── ui/
-│ ├── app.py
+│ ├── app.py # Streamlit demo interface
 │
 ├── data/
-│ ├── mbti_sample.csv
+│ ├── mbti_sample.csv # Sample MBTI dataset
 │
-├── main.py
-├── requirements.txt
-└── README.md
+├── main.py # Terminal version
+├── requirements.txt # Dependencies
+└── README.md # Documentation
+
+
+---
+
+## 🧪 Sample Architecture Diagram
+
+
+            ┌──────────────────────┐
+            │  Persona Builder     │
+            │  (MBTI dataset)      │
+            └──────────┬───────────┘
+                       ▼
+               ┌────────────────┐
+               │   Agent A      │
+               └───────┬────────┘
+                       ▼
+                ┌───────────────┐
+                │ Dialogue       │
+                │ Orchestrator   │
+                └───────┬────────┘
+                       ▼
+               ┌────────────────┐
+               │   Agent B      │
+               └───────────────┘
+                       ▼
+          ┌────────────────────────────┐
+          │    Tool Layer (Sentiment)   │
+          └────────────────────────────┘
 
 
 ---
@@ -77,16 +104,27 @@ python main.py
 
 ---
 
-## 🧠 Future Extensions
-- Add long-term memory using RAG (FAISS + LLM)
-- Add semantic compatibility scoring between agents
-- Add emotional state tracking
-- Multi-agent social world (AI-to-AI interactions)
-- Logging emergent behavior patterns
+## 📊 Dataset Used
+
+MBTI Personality Dataset (Kaggle)  
+https://www.kaggle.com/datasets/datasnaek/mbti-type  
+
+Data is used to generate persona traits and language patterns for each agent.
 
 ---
 
-## 👤 Author
-Your Name (Alex Ji)  
-Yeshiva University – Computer Science (AI Track)  
-Fall 2024 Final Project
+## 🧠 Future Extensions
+
+- **Long-term memory** with RAG (FAISS + LLM)  
+- **Semantic compatibility scoring** between agents  
+- **Emotional state tracking**  
+- **Multi-agent social world simulation**  
+- **Emergent behavior logging**  
+- **Tool-using agents** (search, reasoning, actions)  
+
+---
+
+## 👤 Author  
+**Alex Ji**  
+Yeshiva University — Computer Science (AI Track)  
+Fall 2024 Final Project  
