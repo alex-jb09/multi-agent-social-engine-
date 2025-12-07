@@ -1,0 +1,8 @@
+openai
+langchain
+streamlit
+pandas
+numpy
+textblob
+tqdm
+python-dotenv
